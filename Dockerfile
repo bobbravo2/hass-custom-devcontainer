@@ -1,5 +1,5 @@
 #FROM homeassistant/home-assistant:dev
-FROM mcr.microsoft.com/vscode/devcontainers/python:0-3.10
+FROM mcr.microsoft.com/devcontainers/python:3
 
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
@@ -25,7 +25,7 @@ RUN \
         autoconf \
         build-essential \
         libopenjp2-7 \
-        libtiff5 \
+        # libtiff5 \
         libturbojpeg0 \
         tzdata \
     && apt-get clean \
